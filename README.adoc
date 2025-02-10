@@ -1,4 +1,4 @@
-// Copyright (c) 2021, 2024 IBM Corporation and others.
+// Copyright (c) 2021, 2025 IBM Corporation and others.
 // Licensed under Creative Commons Attribution-NoDerivatives
 // 4.0 International (CC BY-ND 4.0)
 //   https://creativecommons.org/licenses/by-nd/4.0/
@@ -57,7 +57,7 @@ The two microservices that you'll deploy are called `system` and `inventory`. Th
 
 == Additional prerequisites
 
-Before you begin, you must install OpenShift Local to run OpenShift 4 locally on your computer. For installation instructions, refer to the official https://access.redhat.com/documentation/en-us/red_hat_openshift_local/2.23/html/getting_started_guide/installing[OpenShift Local documentation].
+Before you begin, you must install OpenShift Local to run OpenShift 4 locally on your computer. For installation instructions, refer to the official https://console.redhat.com/openshift/create/local[OpenShift Local download^] or https://access.redhat.com/documentation/en-us/red_hat_openshift_local/2.23/html/getting_started_guide/installing[OpenShift Local documentation].
 
 // =================================================================================================
 // Getting Started
