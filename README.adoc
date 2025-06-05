@@ -224,11 +224,34 @@ If you're familiar with Maven and Docker, you might be tempted to run a Maven bu
 
 Go to the `start` directory and build these microservices by running the following commands:
 
-[role=command]
+include::{common-includes}/os-tabs.adoc[]
+
+[.tab_content.windows_section]
+--
+[role='command']
 ```
 cd start
-mvn package
+mvnw.cmd package
 ```
+--
+
+[.tab_content.mac_section]
+--
+[role='command']
+```
+cd start
+./mvnw package
+```
+--
+
+[.tab_content.linux_section]
+--
+[role='command']
+```
+cd start
+./mvnw package
+```
+--
 
 Next, run the `podman build` commands to build container images for your application:
 [role='command']
@@ -474,12 +497,38 @@ A few tests are included for you to test the basic functions of the microservice
 
 Use the following command to run the integration tests against your cluster:
 
-[role=command]
+include::{common-includes}/os-tabs.adoc[]
+
+[.tab_content.windows_section]
+--
+[role='command']
 ```
-mvn verify \ 
+mvnw.cmd verify \ 
 -Dsystem.ip=system-route-my-project.apps-crc.testing \
 -Dinventory.ip=inventory-route-my-project.apps-crc.testing
 ```
+--
+
+[.tab_content.mac_section]
+--
+[role='command']
+```
+./mvnw verify \ 
+-Dsystem.ip=system-route-my-project.apps-crc.testing \
+-Dinventory.ip=inventory-route-my-project.apps-crc.testing
+```
+--
+
+[.tab_content.linux_section]
+--
+[role='command']
+```
+./mvnw verify \ 
+-Dsystem.ip=system-route-my-project.apps-crc.testing \
+-Dinventory.ip=inventory-route-my-project.apps-crc.testing
+```
+--
+
 * Replace the `system.ip` parameter with the appropriate hostname to access your system microservice.
 * Replace the `inventory.ip` parameter with the appropriate hostname to access your inventory microservice.
 
